@@ -1,6 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+  $(document).ready(function(){
+      // Add smooth scrolling to all links
+      $("a").on('click', function(event) {
+    
+        // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== "") {
+          // Prevent default anchor click behavior
+          event.preventDefault();
+    
+          // Store hash
+          var hash = this.hash;
+    
+          // Using jQuery's animate() method to add smooth page scroll
+          // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 800, function(){
+       
+            // Add hash (#) to URL when done scrolling (default click behavior)
+            window.location.hash = hash;
+          });
+        } // End if
+      });
+    });
+</script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -62,19 +89,33 @@
 
 <!-- picture of me -->
           <div class="col-sm-4">
-            <div id="picture" class="row"></div>
+            <br>
+            <br>
+            <div id="picture" class="row">
+              <img id="profilepic" src="profilePic.jpg" class="rotateimg90">
+            </div>
           </div>
 
 <!-- my about me description -->
-          <div class="col-sm-7">
+          <div class="col-sm-8">
             <div id="aboutme" class="row">
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
             <h1>About Me</h1>
             <div class="row">
-            <p>Hello, I'm Ada, a teenager born and raised in Canada. I am a lost cause with no hopes and dreams. Yes, I like K-pop and I like to cover K-pop dances however, I do not aspire to become an idol. I have no interests and I feel like my life will be a failure. No I'm just kidding.</p>
+            <p id="paragraph">Hello, I'm Ada, a student at the University of Waterloo studying Computing and Financial Management. 
+              In high school, I took both computer science and accounting and enjoyed both subjects, for the most part. Thus, why I am in the program that I am in.
+            </p>
             <br>
-            <p>I wish to go to University of Waterloo but I don't want to be indenpendent. My brother said that the two most worthwhile universities are UofT and Waterloo but guess what? I don't have the brains to become a doctor and I am not that determined to be one so UofT you're out! So obviously the on university left is Waterloo.</p>
+            <p>During my years in high school, I took part in side projects and extracurriculars that dealt with my program. This website being one of them. I started this project for fun to learn HTML and CSS, I had no thoughts on creating a website but on my journey I decided why not.
+              I created some mobile game apps in Swift for iOS which I have showcased below. I also participated in Google Code-In which is a programming competition directed for high school students to be exposed to open source. 
+              Aside from computer projects, I also took part in finance extracurriculars. I went to a Women in Capital Markets conference where they expose female high school students about careers in STEM and Business.
+            </p>
             <br>
-            <p>At the moment, I am still in high school so let's just not think about the scary stuff. The scary stuff being.... LIFE!!!!</p>
+            <p>At the moment, I have no direct route of what I want to do. During university, I hope to experiment more through co-op and other extracurriculars.</p>
             </div></div>
           </div>
 
@@ -84,8 +125,14 @@
 
           <br>
 
-        <div id="portfolio" class="row blocker">
+<!--PORTFOLIO STARTS-->
+
+<div id="portfolio" class="row blocker">
           <div id="portfoliosubtitle" class="row">
+              <br>
+              <br>
+              <br>
+              <br>
             <center><h1>Videos</h1></center>
             <center><h4>Videos Edited by Ada Vu</h4></center>
           </div>
@@ -107,7 +154,7 @@
 
 <!-- description for video one -->
             <div class="col-sm-5">
-              <div id="descriptionOne" class="row">
+              <div id="descriptionVid" class="row">
                 <p><h3>YPI &#8286; Released 170606</h3></p>
                 <p>This video introduces a charity called "The Haven on the Queensway" and its values pertaining to the social issue of poverty.</p>
 
@@ -121,8 +168,141 @@
             <center><h4>Games Developed by Ada Vu</h4></center>
           </div>
 
-        </div>
 
+            <br>
+            <br>
+
+<!-- first game, name everything one -->   
+          <div class="col-sm-6">
+             <div id="gameOne" class="row">
+              
+            <div class="slideshow-container">
+              <div class="mySlides1">
+                  <img class="picForGame" src="game1.png ">
+              </div>
+                
+              <div class="mySlides1">
+                  <img class="picForGame" src="game2.png">
+              </div>
+
+              <div class="mySlides1">
+                  <img class="picForGame" src="game3.png">
+              </div>
+
+              <div class="mySlides1">
+                  <img class="picForGame" src="game4.png">
+              </div>
+
+              <div class="mySlides1">
+                  <img class="picForGame" src="game5.png">
+              </div>
+            
+              <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+              <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+            </div>
+            <br>
+
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1, 0)"></span>
+                <span class="dot" onclick="currentSlide(2, 0)"></span>
+                <span class="dot" onclick="currentSlide(3, 0)"></span>
+                <span class="dot" onclick="currentSlide(4, 0)"></span>
+                <span class="dot" onclick="currentSlide(5, 0)"></span>
+            </div>
+            
+            </div>
+          </div>
+
+          <div class="col-sm-1"></div>
+
+<!-- description for game one -->
+          <div class="col-sm-5">
+            <div id="descriptionGame" class="row">
+            <p><h3>SPEEDY &#8286; Released 180101</h3></p>
+             <p>Developed a mobile game in Swift for iOS using Xcode.
+                Implemented a game where users compete against time to pick colours from the board that match the colours displayed using buttons, images and linking actions to objects.
+                Used this experience to achieve my goal in learning Swift and releasing my own mobile gaming app.
+             </p>
+
+            </div>
+          </div>
+
+          
+<!-- second game, description for game two-->   
+<div class="col-sm-6">
+    <div id="descriptionGame" class="row">
+    <p><h3>MEMORY GAME &#8286; Released 171101</h3></p>
+     <p>Developed a mobile game in Swift for iOS using Xcode.
+        Implemented a game where players turn over pairs of matching cards using buttons, shapes, and linking actions to objects.
+        Gained knowledge working with iOS and Xcode.                
+     </p>
+
+    </div>
+  </div>
+
+
+
+<!-- second game pictures -->
+<div class="col-sm-6">
+    <div id="gameTwo" class="row">
+     
+   <div class="slideshow-container">
+     <div class="mySlides2">
+         <img class="picForGame" src="game6.png ">
+     </div>
+       
+     <div class="mySlides2">
+         <img class="picForGame" src="game7.png">
+     </div>
+
+     <div class="mySlides2">
+         <img class="picForGame" src="game8.png">
+     </div>
+
+     <div class="mySlides2">
+         <img class="picForGame" src="game9.png">
+     </div>
+
+     <div class="mySlides2">
+         <img class="picForGame" src="game10.png">
+     </div>
+
+     <div class="mySlides2">
+         <img class="picForGame" src="game11.png">
+     </div>
+
+     <div class="mySlides2">
+         <img class="picForGame" src="game12.png">
+     </div>
+
+     <div class="mySlides2">
+         <img class="picForGame" src="game13.png">
+     </div>
+   
+     <a id="buttonGame2" class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
+     <a id="buttonGame2" class="next" onclick="plusSlides(1, 1)">&#10095;</a>
+   </div>
+   <br>
+
+   <div style="text-align:center">
+       <span class="dot" onclick="currentSlide(1, 1)"></span>
+       <span class="dot" onclick="currentSlide(2, 1)"></span>
+       <span class="dot" onclick="currentSlide(3, 1)"></span>
+       <span class="dot" onclick="currentSlide(4, 1)"></span>
+       <span class="dot" onclick="currentSlide(5, 1)"></span>
+       <span class="dot" onclick="currentSlide(6, 1)"></span>
+       <span class="dot" onclick="currentSlide(7, 1)"></span>
+       <span class="dot" onclick="currentSlide(8, 1)"></span>
+   </div>
+   
+   </div>
+ </div>
+
+ <div class="col-sm-1"></div>   
+
+</div>
+<!-- PORTFOLIO ENDS -->
+  
 
         <br>
 
@@ -134,6 +314,8 @@
               <br>
               <center><h1>Blog</h1></center>
               <p><center><h4>My personal Blog exploring the places that I have visited</h4></center></p>
+              <br>
+              <p><center><h5>To Be Updated!</h5></center></p>
               <br>
                 <div class="row"><div class="col-sm-10 col-sm-offset-1">
                 <center><button class="btn btn-default btn-md" onclick="window.location.href ='https://www.instagram.com/ada.vu/';">View Instagram &#8811;</button></center>
@@ -160,5 +342,6 @@
   </div>
 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<script src="interactive.js"></script>
 </body>
 </html>
