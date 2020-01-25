@@ -16,7 +16,7 @@ a {
   color: plum;
 }
 #welcome {
-  background-image: url(https://images.unsplash.com/photo-1554310603-d39d43033735?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80://www.zastavki.com/pictures/originals/2013/Nature___Rivers_and_lakes___Landscape_Korea_054252_.jpg);
+  background-image: url(backgroundimage.jpg);
   background-size: cover;
   height: 800px;
 }
@@ -151,14 +151,7 @@ body {
   width: 100%;
 }
 #picture {
-  margin-top: 150px;
-}
-.rotateimg90 {
-  -webkit-transform:rotate(90deg);
-  -moz-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  -o-transform: rotate(90deg);
-  transform: rotate(90deg);
+  margin-top: 50px;
 }
 #blogContent{
   margin-top: 50px;
